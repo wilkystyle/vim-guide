@@ -103,7 +103,7 @@ There are 2 basic modes that you will encounter: **Normal mode** and **Insert mo
 The takeaway here is that you want to spend most of your time in normal mode, dropping into insert mode only when you need to input text. In general, we spend most of our time navigating around and manipulating (deleting, copying pasting, shifting, etc) text, and not typing it.
 
 > **Tip:**<br>
-> The <kbd>Esc</kbd> key will always exit insert or visual mode, and return you to normal mode. Reaching up to press <kbd>Esc</kbd> all the time really sucks, though. You can press <kbd>Ctrl</kbd>-<kbd>[</kbd>, which is the same thing on U.S. keyboards. <kbd>Ctrl</kbd>-<kbd>c</kbd> also works, and is my preferred way of doing it. There is one instance that I know of where <kbd>Ctrl</kbd>-<kbd>c</kbd> is not equivalent to pressing <kbd>Esc</kbd>. See the "block commenting" tip in "Some handy tips" further down.
+> The <kbd>Esc</kbd> key will always exit insert or visual mode, and return you to normal mode. Reaching up to press <kbd>Esc</kbd> all the time really sucks, though. You can press <kbd>Ctrl</kbd>-<kbd>[</kbd>, which is the same thing on U.S. keyboards. <kbd>Ctrl</kbd>-<kbd>c</kbd> also works, and is my preferred way of doing it. There is one instance that I know of where <kbd>Ctrl</kbd>-<kbd>c</kbd> is not equivalent to pressing <kbd>Esc</kbd>. See the **block commenting** tip in [Some handy tips](#section-10-some-handy-tips) further down.
 
 ---
 
