@@ -265,7 +265,7 @@ Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> 
 * Press <kbd>q</kbd> then the key for the register you want to store in.
 * Press <kbd>q</kbd> again to stop recording.
 * To play back, use <kbd>@</kbd> followed by the key of the register you stored your macro in.
-* You can run a macro multiple times: <kbd>1</kbd><kbd>0</kbd>@<kbd>a</kbd> to run the macro stored in the `a` register 10 times.
+* You can run a macro multiple times: <kbd>1</kbd><kbd>0</kbd><kbd>@</kbd><kbd>a</kbd> to run the macro stored in the `a` register 10 times.
 
 ---
 
