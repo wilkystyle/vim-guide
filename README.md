@@ -97,13 +97,13 @@ Being proficient with Vim means thinking about editing text in a new way. Vim is
 
 There are 2 basic modes that you will encounter: **Normal mode** and **Insert mode**. Normal mode is aimed primarily at navigating text. Insert mode is for typing text. You should think of normal mode as the default mode.
 
-> **Analogy:**<br>
+> #### Analogy: Driving a car
 > Let's pretend you are a landscaper in charge of maintaining a neighborhood. Sometimes you need to do things like transplant a tree, plant some flowers, or clear out some brush. Your car is super efficient and fast at getting around, but if you need to actually remove, change, or add something to the landscape, you have to get out of your car. Once you're done, you get back in your car, and move on. In Vim, normal mode is like driving around in your car, and insert mode is like getting out of the car at a location to make a change. You would never park your car, make a change, and then walk 10 blocks away to make another change when your car is much more efficient. Similarly, don't try to move around in insert mode using the arrow (or other directional keys). Your car (normal mode) is much faster!
 
 The takeaway here is that you want to spend most of your time in normal mode, dropping into insert mode only when you need to input text. In general, we spend most of our time navigating around and manipulating (deleting, copying pasting, shifting, etc) text, and not typing it.
 
-> **Tip:**<br>
-> The <kbd>Esc</kbd> key will always exit insert or visual mode and return you to normal mode. Reaching up to press <kbd>Esc</kbd> all the time really sucks, though. You can press <kbd>Ctrl</kbd>-<kbd>[</kbd>, which is the same thing on U.S. keyboards. <kbd>Ctrl</kbd>-<kbd>c</kbd> also works, and is my preferred way of doing it. There is one instance that I know of where <kbd>Ctrl</kbd>-<kbd>c</kbd> is not equivalent to pressing <kbd>Esc</kbd>. See the **block commenting** tip in the [Some handy tips](#section-10-some-handy-tips) section for more on this.
+> #### Tip: Avoiding the Esc key
+> The <kbd>Esc</kbd> key will always exit insert or visual mode and return you to normal mode. Reaching up to press <kbd>Esc</kbd> all the time really sucks, though. You can press <kbd>Ctrl</kbd>-<kbd>[</kbd>, which is the same thing on U.S. keyboards. <kbd>Ctrl</kbd>-<kbd>c</kbd> also works, and is my preferred way of doing it. There is one instance that I know of where <kbd>Ctrl</kbd>-<kbd>c</kbd> is not equivalent to pressing <kbd>Esc</kbd>. For more on why, see this [Vim Gotcha](#vim-gotcha-differences-between-ctrl-c-and-esc) below.
 
 ---
 
@@ -123,7 +123,7 @@ To understand Vim's philosophy, let's look at the Vim "language".
 A _verb_ is something that you can _do_ to text, such as changing, selecting, replacing, or yanking.
 
 
-> **Tip:**<br>
+> #### Tip: Repeat keypress to apply to a line
 > Often times, for verbs that await a modifier/noun after pressing the verb key, you can apply the verb to the current line by simply pressing the verb key again.
 
 + Visual
@@ -251,7 +251,7 @@ Copying and pasting is done a little differently in Vim than in most modern edit
 + <kbd>0</kbd> is the default register. Copying text makes it go here.
 + <kbd>"</kbd> is the quickchange register. When you delete or change text, it goes here.
 
-> **Tip:**<br>
+> #### Tip: Pasting in insert mode
 > If you need to paste in insert mode (or at the command line/search prompt), press <kbd>Ctrl</kbd>-<kbd>r</kbd>. You will see a <kbd>"</kbd> appear at the cursor position. This indicates that Vim is waiting for you to specify the register to paste from. <kbd>0</kbd> is the default register, and will have your most recently-copied text.
 
 ---
@@ -345,8 +345,8 @@ Some people say that
 
     1. Press <kbd>Esc</kbd> or <kbd>Ctrl</kbd>-<kbd>[</kbd> (NOT <kbd>Ctrl</kbd>-<kbd>c</kbd>!) to exit insert mode and replicate the inserted character across all rows that you previously selected.
 
-> **Note:**<br>
-> Why not <kbd>Ctrl</kbd>-<kbd>c</kbd>? In Vim, <kbd>Ctrl</kbd>-<kbd>c</kbd> means to stop the thing you're currently doing. In insert mode, this means you stop inserting text and return to command mode. It also means that, unlike <kbd>Esc</kbd> (or the equivalent <kbd>Ctrl</kbd>-<kbd>[</kbd>),  it won't check to see if you've entered any abbreviations, or autocmds. Vim simply assumes you want to stop whatever you were doing (in this case, inserting text at the beginning of multiple lines), and go back to normal mode.
+> #### Vim Gotcha: Differences between Ctrl-c and Esc
+> Why doesn't <kbd>Ctrl</kbd>-<kbd>c</kbd> always do the same thing as <kbd>Esc</kbd>? In Vim, <kbd>Ctrl</kbd>-<kbd>c</kbd> means to stop the thing you're currently doing. In insert mode, this means you stop inserting text and return to command mode. It also means that, unlike <kbd>Esc</kbd> (or the equivalent <kbd>Ctrl</kbd>-<kbd>[</kbd>),  it won't check to see if you've entered any abbreviations, or autocmds. Vim simply assumes you want to stop whatever you were doing (in this case, inserting text at the beginning of multiple lines), and go back to normal mode.
 
 + **Diff two files**:
 
@@ -384,4 +384,4 @@ Some people say that
 
 This guide is a perpetual work-in-progress as I continue to learn and become more familiar with Vim. I'll be cleaning it up, adding more detail, and just making general improvements as time goes on.
 
-If you have any questions or comments, corrections to anything I've written, or contributions you want to add, hit me up on Twitter at [@wahoowilky](http://twitter.com/wahoowilky)!
+If you have any questions or comments, corrections to anything I've written, or contributions you want to add, hit me up on Twitter at [@wahoowilky](http://twitter.com/wahoowilky), or just submit a pull request!
