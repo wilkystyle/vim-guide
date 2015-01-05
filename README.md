@@ -262,10 +262,10 @@ Copying and pasting is done a little differently in Vim than in most modern edit
 
 Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> key. This is where macros come in.
 
-+ Press <kbd>q</kbd> then the key for the register you want to store in.
-+ Press <kbd>q</kbd> again to stop recording.
-+ To play back, use <kbd>@</kbd> followed by the key of the register you stored your macro in.
-+ You can run a macro multiple times: `10@a` to run the macro stored in the <kbd>a</kbd> register 10 times.
+* Press <kbd>q</kbd> then the key for the register you want to store in.
+* Press <kbd>q</kbd> again to stop recording.
+* To play back, use <kbd>@</kbd> followed by the key of the register you stored your macro in.
+* You can run a macro multiple times: <kbd>1</kbd><kbd>0</kbd>@<kbd>a</kbd> to run the macro stored in the `a` register 10 times.
 
 ---
 
