@@ -2,9 +2,33 @@
 
 This is a quick summary and reference of helpful knowledge and my favorite tips in Vim that I've acquired over the years. This is not meant to be a thorough Vim tutorial. That is already provided at the operating system command prompt by typing `$ vimtutor`. I'll update and improve it from time to time, so feel free to bookmark, suggest improvements, and check back in the future!
 
+## Table of Contents
+
+* [Why another Vim tutorial?](#why-another-vim-tutorial)
+* [Section 0: The legend](#section-0-the-legend)
+* [Section 1: Working with files](#section-1-working-with-files)
+* [Section 2: Modes, motions, and getting around](#section-2-modes-motions-and-getting-around)
+* [Section 3: Speaking the "Vim" language](#section-3-speaking-the-vim-language)
+    * [Verbs](#verbs)
+    * [Nouns](#nouns)
+    * [Modifiers](#modifiers)
+    * [Some examples](#some-examples)
+* [Section 4: Efficient movement](#section-4-efficient-movement)
+* [Section 5: Efficient editing](#section-5-efficient-editing)
+* [Section 6: Copying and pasting](#section-6-copying-and-pasting)
+* [Section 7: Macros](#section-7-macros)
+* [Section 8: Working with multiple windows](#section-8-working-with-multiple-windows)
+    * [Splitting](#splitting)
+    * [Shortcuts](#shortcuts)
+* [Section 9: Working with many files in Vim](#section-9-working-with-many-files-in-vim)
+* [Section 10: Some handy tips](#section-10-some-handy-tips)
+* [Questions, comments, corrections, contributions](#questions-comments-corrections-contributions)
+
 ---
 
 ## Why another Vim tutorial?
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 After using Emacs for a couple of years, I decided to give [Vim](http://www.vim.org/) a try. As is the case with most editors I try, it took a few cycles of attempting to use it as my main editor, giving up, and then coming back and trying again. Approximately 8 cycles in, it finally stuck.
 
@@ -17,6 +41,8 @@ That's what this guide is for. Not a lot of glam, but hopefully a lot of bang fo
 ---
 
 ## Section 0: The legend
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 In this document, I'll have to convey some complex things. Here's how I'll represent them:
 
@@ -42,6 +68,8 @@ In this document, I'll have to convey some complex things. Here's how I'll repre
 
 ## Section 1: Working with files
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 The first thing you'll want to know is how to open, save, and close files, and then [get out of the editor](https://twitter.com/iamdevloper/status/435555976687923200).
 
 + `:e README.md` to open README.md in the current directory. (File will be created if it doesn't already exist)
@@ -63,6 +91,8 @@ The first thing you'll want to know is how to open, save, and close files, and t
 
 ## Section 2: Modes, motions, and getting around
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 Being proficient with Vim means thinking about editing text in a new way. Vim is a modal editor, which means that the keys you press will do different things depending on which mode you're in.
 
 There are 2 basic modes that you will encounter: **Normal mode** and **Insert mode**. Normal mode is aimed primarily at navigating text. Insert mode is for typing text. You should think of normal mode as the default mode.
@@ -79,11 +109,15 @@ The takeaway here is that you want to spend most of your time in normal mode, dr
 
 ## Section 3: Speaking the "Vim" language
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 Probably the most helpful method for remembering how to do some of the seemingly non-intuitive (at least for users of modern-day text editors) keystrokes that you'll be using in Vim is to understand _why_ you're doing them. If you understand the philosophy by which Vim operates, suddenly you'll find that you're not simply memorizing a series of cryptic key-presses, but putting together simple concepts and principles to accomplish complex and powerful results.
 
 To understand Vim's philosophy, let's look at the Vim "language".
 
 ### Verbs:
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 
 A _verb_ is something that you can _do_ to text, such as changing, selecting, replacing, or yanking.
@@ -110,6 +144,8 @@ A _verb_ is something that you can _do_ to text, such as changing, selecting, re
 
 ### Nouns:
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 A _noun_ is some subset of the text which Vim can recognize and understand.
 
 + Word (a combination of letter(s), number(s), and/or underscore(s) in sequence): <kbd>w</kbd>
@@ -124,6 +160,8 @@ A _noun_ is some subset of the text which Vim can recognize and understand.
 
 ### Modifiers:
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 These are used when applying certain verbs to a noun, in order to specify more advanced or complex behavior. For example, if we wanted to delete a word, we could use <kbd>d</kbd> <kbd>w</kbd> with the cursor placed on the first character of the word. What if we're not on the first character of the word, but somewhere in the middle? This is when a modifier would come in handy. We could type <kbd>d</kbd> <kbd>i</kbd> <kbd>w</kbd> to "delete inside word", and no matter which character in the word our cursor was on, we would delete the entire word.
 
 Some other modifiers are:
@@ -135,6 +173,8 @@ Some other modifiers are:
 + Search: <kbd>/</kbd>
 
 ### Some examples:
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 <kbd>c</kbd> <kbd>i</kbd> <kbd>w</kbd>: "Change inside word". Change the word at the cursor (deletes the entire word, and places you in insert mode at the beginning of where the word used to be).
 
@@ -151,6 +191,8 @@ Some other modifiers are:
 ---
 
 ## Section 4: Efficient movement
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 Now that you know how to perform some sweet verbs on those nouns, let's make sure you're doing the elementary movements as efficiently as possible!
 
@@ -172,6 +214,8 @@ Now that you know how to perform some sweet verbs on those nouns, let's make sur
 ---
 
 ## Section 5: Efficient editing
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 Here are some tips and new ways to perform common editing tasks efficiently.
 
@@ -196,6 +240,8 @@ Here are some tips and new ways to perform common editing tasks efficiently.
 
 ## Section 6: Copying and pasting
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 Copying and pasting is done a little differently in Vim than in most modern editors. Understanding the registers and learning to use them to your advantage can let you do some really cool things in Vim.
 
 + <kbd>Y</kbd> to copy an entire line.
@@ -212,6 +258,8 @@ Copying and pasting is done a little differently in Vim than in most modern edit
 
 ## Section 7: Macros
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> key. This is where macros come in.
 
 + Press <kbd>q</kbd> then the key for the register you want to store in.
@@ -223,7 +271,11 @@ Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> 
 
 ## Section 8: Working with multiple windows
 
+<sup>_[back to top](#table-of-contents)_</sup>
+
 ### Splitting:
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 `:vs` - Open a vertical split showing whatever buffer the current window is showing.
 
@@ -235,6 +287,8 @@ Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> 
 
 
 ### Shortcuts:
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 <kbd>Ctrl</kbd>-<kbd>w</kbd> followed by:
 
@@ -250,6 +304,8 @@ Sometimes you need to repeat an action that is too complex for the <kbd>.</kbd> 
 ---
 
 ## Section 9: Working with many files in Vim
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 Some people say that
 
@@ -270,6 +326,8 @@ Some people say that
 ---
 
 ## Section 10: Some handy tips
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 + **Block commenting**:
 
@@ -321,6 +379,8 @@ Some people say that
 ---
 
 ## Questions, comments, corrections, contributions
+
+<sup>_[back to top](#table-of-contents)_</sup>
 
 This guide is a perpetual work-in-progress as I continue to learn and become more familiar with Vim. I'll be cleaning it up, adding more detail, and just making general improvements as time goes on.
 
